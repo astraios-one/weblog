@@ -1,5 +1,5 @@
 Type: Template
-Title: Landing Page Template
+Title: Page Template
 
 <!DOCTYPE html>
 <html lang="en">
@@ -218,11 +218,8 @@ Title: Landing Page Template
         vertical-align: -0.125em;
       }
 
-      .gap-right {
+      .u-gap--right {
         padding-right: 0.5em;
-      }
-      .gap-left {
-        padding-left: 0.5em;
       }
 
       .header-container {
@@ -230,6 +227,13 @@ Title: Landing Page Template
         flex-direction: row;
         align-items: center; /* This will vertically center align the items */
         justify-content: flex-start; /* Adjusts the spacing, you can use space-between or space-around if needed */
+      }
+
+      .gap-right {
+        padding-right: 0.5em;
+      }
+      .gap-left {
+        padding-left: 0.5em;
       }
     </style>
   </head>
@@ -256,6 +260,8 @@ Title: Landing Page Template
     </header>
 
     <main>
+      {body}
+
       <hr />
 
       <h2>Recent posts</h2>
@@ -264,66 +270,66 @@ Title: Landing Page Template
     </main>
 
     <footer>
-      <p>
-        <span
-          ><svg
-            aria-hidden="true"
-            class="svg-inline--fa fa-envelope gap-right"
-            focusable="false"
-            data-prefix="fas"
-            data-icon="envelope"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 512 512"
-            data-fa-i2svg=""
+        <p>
+          <span
+            ><svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-envelope gap-right"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="envelope"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              data-fa-i2svg=""
+            >
+              <path
+                fill="currentColor"
+                d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                style="--darkreader-inline-fill: currentColor"
+                data-darkreader-inline-fill=""
+              ></path></svg
+            ><!-- <i aria-hidden="true" class="fa-solid fa-envelope gap-right"></i> Font Awesome fontawesome.com --><a
+              class="u-email gap-right"
+              href="mailto:ehqo@omg.lol"
+              >Contact</a
+            ></span
           >
-            <path
-              fill="currentColor"
-              d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
-              style="--darkreader-inline-fill: currentColor"
-              data-darkreader-inline-fill=""
-            ></path></svg
-          ><!-- <i aria-hidden="true" class="fa-solid fa-envelope gap-right"></i> Font Awesome fontawesome.com --><a
-            class="u-email gap-right"
-            href="mailto:ehqo@omg.lol"
-            >Contact</a
-          ></span
-        >
-        |
-        <span
-          ><svg
-            aria-hidden="true"
-            class="svg-inline--fa fa-check gap-right gap-left"
-            focusable="false"
-            data-prefix="fas"
-            data-icon="check"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-            data-fa-i2svg=""
-          >
-            <path
-              fill="currentColor"
-              d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
-              style="--darkreader-inline-fill: currentColor"
-              data-darkreader-inline-fill=""
-            ></path></svg
-          ><!-- <i aria-hidden="true" class="fa-solid fa-check gap-right"></i> Font Awesome fontawesome.com --><a
-            target="_blank"
-            href="https://proven.lol/7a3754"
-            title="View the Proof in a new tab."
-            >Proven</a
-          >
-        </span>
-      </p>
-      <p>
-        <a class="feed gap-right gap-left" href="https://ehqo.weblog.lol/rss.xml">RSS</a>
-        |
-        <a class="feed gap-right gap-left" href="https://ehqo.weblog.lol/atom.xml">Atom</a>
-        | 
-        <a class="feed gap-right gap-left" href="https://ehqo.weblog.lol/feed.json">JSON</a>
-      </p>
-      <p>Made with <a href="https://weblog.lol">weblog.lol</a>.</p>
-    </footer>
+          |
+          <span
+            ><svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-check gap-right gap-left"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="check"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              data-fa-i2svg=""
+            >
+              <path
+                fill="currentColor"
+                d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                style="--darkreader-inline-fill: currentColor"
+                data-darkreader-inline-fill=""
+              ></path></svg
+            ><!-- <i aria-hidden="true" class="fa-solid fa-check gap-right"></i> Font Awesome fontawesome.com --><a
+              target="_blank"
+              href="https://proven.lol/7a3754"
+              title="View the Proof in a new tab."
+              >Proven</a
+            >
+          </span>
+        </p>
+        <p>
+          <a class="feed gap-right gap-left" href="https://ehqo.weblog.lol/rss.xml">RSS</a>
+          |
+          <a class="feed gap-right gap-left" href="https://ehqo.weblog.lol/atom.xml">Atom</a>
+          | 
+          <a class="feed gap-right gap-left" href="https://ehqo.weblog.lol/feed.json">JSON</a>
+        </p>
+        <p>Made with <a href="https://weblog.lol">weblog.lol</a>.</p>
+      </footer>
   </body>
 </html>

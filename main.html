@@ -225,6 +225,13 @@
         align-items: center; /* This will vertically center align the items */
         justify-content: flex-start; /* Adjusts the spacing, you can use space-between or space-around if needed */
       }
+
+      .gap-right {
+        padding-right: 0.5em;
+      }
+      .gap-left {
+        padding-left: 0.5em;
+      }
     </style>
   </head>
   <body>
@@ -250,12 +257,8 @@
     </header>
 
     <main>
-      <article>
-        {body}
-        <aside class="post-tags">
-          {tags}
-        </aside>
-      </article>
+      {body}
+
       <hr />
 
       <h2>Recent posts</h2>
@@ -268,7 +271,7 @@
         <span
           ><svg
             aria-hidden="true"
-            class="svg-inline--fa fa-envelope u-color--purple u-gap--right"
+            class="svg-inline--fa fa-envelope gap-right"
             focusable="false"
             data-prefix="fas"
             data-icon="envelope"
@@ -283,8 +286,8 @@
               style="--darkreader-inline-fill: currentColor"
               data-darkreader-inline-fill=""
             ></path></svg
-          ><!-- <i aria-hidden="true" class="fa-solid fa-envelope u-gap--right"></i> Font Awesome fontawesome.com --><a
-            class="u-email"
+          ><!-- <i aria-hidden="true" class="fa-solid fa-envelope gap-right"></i> Font Awesome fontawesome.com --><a
+            class="u-email gap-right"
             href="mailto:ehqo@omg.lol"
             >Contact</a
           ></span
@@ -293,7 +296,7 @@
         <span
           ><svg
             aria-hidden="true"
-            class="svg-inline--fa fa-check u-gap--right"
+            class="svg-inline--fa fa-check gap-right gap-left"
             focusable="false"
             data-prefix="fas"
             data-icon="check"
@@ -308,15 +311,21 @@
               style="--darkreader-inline-fill: currentColor"
               data-darkreader-inline-fill=""
             ></path></svg
-          ><!-- <i aria-hidden="true" class="fa-solid fa-check u-gap--right"></i> Font Awesome fontawesome.com --><a
+          ><!-- <i aria-hidden="true" class="fa-solid fa-check gap-right"></i> Font Awesome fontawesome.com --><a
             target="_blank"
             href="https://proven.lol/7a3754"
-            title="View the Proof in a new window or tab."
+            title="View the Proof in a new tab."
             >Proven</a
-          ></span
-        >
+          >
+        </span>
       </p>
-
+      <p>
+        <a class="feed gap-right gap-left" href="https://ehqo.weblog.lol/rss.xml">RSS</a>
+        |
+        <a class="feed gap-right gap-left" href="https://ehqo.weblog.lol/atom.xml">Atom</a>
+        | 
+        <a class="feed gap-right gap-left" href="https://ehqo.weblog.lol/feed.json">JSON</a>
+      </p>
       <p>Made with <a href="https://weblog.lol">weblog.lol</a>.</p>
     </footer>
   </body>
